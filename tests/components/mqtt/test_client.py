@@ -1392,9 +1392,7 @@ async def test_subscribe_error(
     while mqtt_client_mock.subscribe.call_count == 0:
         await hass.async_block_till_done()
     await hass.async_block_till_done()
-    assert (
-        "Error talking to MQTT: The client is not currently connected." in caplog.text
-    )
+    assert "mqtt_broker_error" in caplog.text
 
 
 async def test_handle_message_callback(
