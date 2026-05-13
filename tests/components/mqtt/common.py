@@ -747,7 +747,18 @@ MOCK_SUBENTRY_DEVICE_DATA = {
 }
 
 MOCK_NOTIFY_SUBENTRY_DATA_MULTI = {
-    "device": MOCK_SUBENTRY_DEVICE_DATA | {"mqtt_settings": {"qos": 2}},
+    "device": MOCK_SUBENTRY_DEVICE_DATA
+    | {
+        "mqtt_settings": {
+            "qos": 2.0,
+            "message_expiry_interval": {
+                "days": 0,
+                "hours": 0,
+                "minutes": 1,
+                "seconds": 30,
+            },
+        }
+    },
     "components": MOCK_SUBENTRY_NOTIFY_COMPONENT1 | MOCK_SUBENTRY_NOTIFY_COMPONENT2,
 } | MOCK_SUBENTRY_AVAILABILITY_DATA
 
