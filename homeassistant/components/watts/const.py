@@ -6,8 +6,14 @@ from homeassistant.components.climate import HVACMode
 
 DOMAIN = "watts"
 
-OAUTH2_AUTHORIZE = "https://visionlogin.b2clogin.com/visionlogin.onmicrosoft.com/B2C_1A_VISION_UNIFIEDSIGNUPORSIGNIN/oauth2/v2.0/authorize"
-OAUTH2_TOKEN = "https://visionlogin.b2clogin.com/visionlogin.onmicrosoft.com/B2C_1A_VISION_UNIFIEDSIGNUPORSIGNIN/oauth2/v2.0/token"
+OAUTH2_AUTHORIZE = (
+    "https://visionlogin.b2clogin.com/visionlogin.onmicrosoft.com/B2C_1A_VISIO"
+    "N_UNIFIEDSIGNUPORSIGNIN/oauth2/v2.0/authorize"
+)
+OAUTH2_TOKEN = (
+    "https://visionlogin.b2clogin.com/visionlogin.onmicrosoft.com/B2C_1A_VISION_UNIFIEDSIGNUPORSIG"
+    "NIN/oauth2/v2.0/token"
+)
 
 OAUTH2_SCOPES = [
     "openid",
